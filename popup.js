@@ -1,5 +1,7 @@
 $(function() {
     $("#name").keyup(function() {
-        $("#greet").text("Hello " + $('#name').val());
+        var name = $('#name').val();
+        if (name == "") name = "World";
+        $("#greet").text("Hello " + name);
     });
 })
